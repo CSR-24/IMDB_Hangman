@@ -11,6 +11,20 @@
   background: black;
 }
 
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+}
+
+ul.share li{
+  display: inline;
+}
+
+.share-btn {
+  width: 25px;
+  height: 25px;
+}
+
 .letterOnScreen {
   position: relative;
   width: 50px;
@@ -27,40 +41,59 @@
 #gameBoard {
   position: relative;
   width: 600px;
-  height: 600px;
+  height: 650px;
   background: steelblue;
 }
 
 #keyboard {
   position: relative;
-  top: 420px;
-  left: 85px;
+  top: 380px;
+  left: 70px;
+}
+
+#row0 {
+  position: absolute;
+  top: 0px;
+  left: 15px;
 }
 
 #row1 {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 50px;
+  left: 40px;
 }
 
 #row2 {
   position: absolute;
-  top: 50px;
-  left: 25px;
+  top: 100px;
+  left: 60px;
 }
 
 #row3 {
   position: absolute;
-  top: 100px;
-  left: 65px;
+  top: 150px;
+  left: 85px;
 }
 
 #gameScreen {
   position: absolute;
-  top: 260px;
+  top: 235px;
   left: 10px;
   width: 580px;
   height: 130px;
+  background: white;
+}
+
+
+#startScreen {
+  position: absolute;
+  top: 235px;
+  left: 10px;
+  width: 580px;
+  height: 130px;
+  line-height: 130px;
+  z-index: 3;
+  text-align: center;
   background: white;
 }
 
@@ -70,9 +103,52 @@
   font-size: 20px;  
 }
 
+#scoreCard {
+  position: absolute;
+  top: 580px;
+  left: 0px;
+  width: 600px;
+  height: 50px;
+  color: white;
+  text-align: center;
+  background: black;
+}
+
+#confirmNext {
+  position: absolute;
+  top: 235px;
+  left: 10px;
+  width: 580px;
+  height: 130px;
+  z-index: 1;
+  color: black;
+  text-align: center;
+  font-family: 'Times New Roman';
+  font-size: 20px; 
+  background: white;
+}
+
+#confirmGameOver {
+  position: absolute;
+  top: 230px;
+  left: 10px;
+  width: 580px;
+  height: 130px;
+  z-index: 2;
+  color: black;
+  text-align: center;
+  font-family: 'Times New Roman';
+  font-size: 20px; 
+  background: white;
+}
+
+hr {
+  color: red;
+}
+
 #instruction2 {
   position: absolute;
-  top: 582px;
+  top: 632px;
   left: 0px;
   width: 600px;
   color: white;
@@ -82,18 +158,44 @@
 
 #gameHint {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 600px;
+  top: 120px;
+  left: 10px;
+  right: 10px;
+  width: 580px;
   height: 120px;
   text-align: left;
   color: white;
+  text-align: left;
+  font-family: 'georgia';
+  font-size: 28px;
+}
+
+#gameMsg {
+  position: absolute;
+  top: 40px;
+  left: 250px;
+  width: 250px;
+  height: 60px;
+  text-align: center;
+  z-index: 1;
+  color: white;
+  background: black;
+}
+
+#posterHolder {
+  position: absolute;
+  top: 0px;
+  left: 500px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  z-index: 1;
   background: black;
 }
 
 #strikesCount {
   position: absolute;
-  top: 120px;
+  top: 0px;
   left: 0px;
   width: 600px;
   height: 100px;
@@ -103,7 +205,7 @@
 }
 
 
-#strike1 {
+#strike0 {
   position: absolute;
   top: 50px;
   left: 50px;
@@ -112,11 +214,12 @@
 	background: lightgreen;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
-	border-radius: 50px;
+	border-radius: 10px;
+  text-align: center;
   color: black;
 }
 
-#strike2 {
+#strike1 {
   position: absolute;
   top: 50px;
   left: 100px;
@@ -125,11 +228,12 @@
 	background: lightgreen;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
-	border-radius: 50px;
+	border-radius: 10px;
+  text-align: center;
   color: black;
 }
 
-#strike3 {
+#strike2 {
   position: absolute;
   top: 50px;
   left: 150px;
@@ -138,11 +242,12 @@
 	background: lightgreen;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
-	border-radius: 50px;
+	border-radius: 10px;
+  text-align: center;
   color: black;
 }
 
-#strike4 {
+#strike3 {
   position: absolute;
   top: 50px;
   left: 200px;
@@ -151,19 +256,7 @@
 	background: lightgreen;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
-	border-radius: 50px;
-  color: black;
-}
-
-#strike5 {
-  position: absolute;
-  top: 50px;
-  left: 250px;
-	width: 30px;
-	height: 30px;
-	background: lightgreen;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
+	border-radius: 10px;
+  text-align: center;
   color: black;
 }

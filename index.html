@@ -6,7 +6,8 @@
     
     
     
-    
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
         <link rel="stylesheet" href="css/style.css">
 
     
@@ -17,17 +18,39 @@
   <body>
 
     <div id='gameBoard'>
-  <div id='gameHint'>Game Hint Loading...</div>
-  <div id='strikesCount'>
-    Five Attempts to Guess the Movie.
-    <div id='strike1'></div>
-    <div id='strike2'></div>
-    <div id='strike3'></div>
-    <div id='strike4'></div>
-    <div id='strike5'></div>
+  <div id='gameHint'></div>
+  <div id='startScreen'>
+<!--     <div>Player Name: <input placeholder = 'Player A' id='name'/></div> -->
+    <div>Get Movies From&nbsp;&nbsp;&nbsp;
+      <input type='radio' name='country' value='us' class="country"> US&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type='radio' name='country' value='india' class="country"> India</div>
   </div>
+  <div id='posterHolder'></div>
+  <div id='gameMsg'></div>
+  <div id='strikesCount'>
+    <h4>GUESS THE MOVIE</h4>
+    <div id='strike0' class = 'strike'>1</div>
+    <div id='strike1' class = 'strike'>2</div>
+    <div id='strike2' class = 'strike'>3</div>
+    <div id='strike3' class = 'strike'>4</div>
+  </div>
+  <button id='confirmNext' type="button" class="btn btn-primary btn-block"></button>
+  <button id='confirmGameOver' type="button" class="btn btn-primary btn-block"></button>
   <div id='gameScreen'><div id='game'>Loading...</div></div>
   <div id='keyboard'>
+    <div id='row0'>
+      <button class='key' id='0'>0</button>
+      <button class='key' id='1'>1</button>
+      <button class='key' id='2'>2</button>
+      <button class='key' id='3'>3</button>
+      <button class='key' id='4'>4</button>
+      <button class='key' id='5'>5</button>
+      <button class='key' id='6'>6</button>
+      <button class='key' id='7'>7</button>
+      <button class='key' id='8'>8</button>
+      <button class='key' id='9'>9</button>
+      <button class='key' id='&'>&</button>
+    </div>
     <div id='row1'>
       <button class='key' id='Q'>Q</button>
       <button class='key' id='W'>W</button>
@@ -59,12 +82,15 @@
       <button class='key' id='B'>B</button>
       <button class='key' id='N'>N</button>
       <button class='key' id='M'>M</button>
+      <button class='key' id=':'>:</button>
     </div>
   </div>
+  <div id='scoreCard'>Score</div>
   <div id='instruction2'>Use the keyboard Or click the appropriate key on Screen.</div>
 </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.15.0/lodash.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
 
         <script src="js/index.js"></script>
 
